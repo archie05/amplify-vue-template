@@ -31,6 +31,9 @@ function createTodo() {
   listTodos();
 });
 
+function fetchHeaders() {
+  
+}
 </script>
 
 <template>
