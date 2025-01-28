@@ -32,13 +32,7 @@ function createTodo() {
 });
 
 function fetchHeaders() {
-  created() {
-    let uri = window.location.search.substring(1); 
-    let params = new URLSearchParams(uri);
-    console.log(params.get("var_name"));
-  },
-  updated() {
-  }
+ 
 }
 </script>
 
@@ -46,7 +40,7 @@ function fetchHeaders() {
   <main>
     <h1>Hello</h1>
     <button @click="createTodo">+ new</button>
-    fetchHeaders;
+   
     <div>
       🥳 App successfully hosted. Try creating a new todo.
       <br />
