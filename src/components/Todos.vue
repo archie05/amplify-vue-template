@@ -32,21 +32,21 @@ function createTodo() {
 });
 
 function fetchHeaders() {
-  
+  created() {
+    let uri = window.location.search.substring(1); 
+    let params = new URLSearchParams(uri);
+    console.log(params.get("var_name"));
+  },
+  updated() {
+  }
 }
 </script>
 
 <template>
   <main>
-    <h1>My todos</h1>
+    <h1>Hello</h1>
     <button @click="createTodo">+ new</button>
-    <ul>
-      <li 
-        v-for="todo in todos" 
-        :key="todo.id">
-        {{ todo.content }}
-      </li>
-    </ul>
+    fetchHeaders;
     <div>
       🥳 App successfully hosted. Try creating a new todo.
       <br />
