@@ -25,28 +25,44 @@ function createTodo() {
     listTodos();
   });
 }
+
+function getUrlParams() {
+  console.log("Test getUrlParams");
+  let urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.has('product_id') && urlParams.has('base_number') && urlParams.has('offer_id')){
+    console.log(urlParams.get('product_id'));
+    console.log(urlParams.get('base_number'));
+    console.log(urlParams.get('offer_id'));
+
+    
+  }
+}
     
 // fetch todos when the component is mounted
  onMounted(() => {
-  listTodos();
+  getUrlParams()
 });
 
-function fetchHeaders() {
- 
-}
 </script>
 
+<style scoped>
+.image-container {
+  width: 800px;
+  height: 800px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the div without distortion */
+}
+</style>
+
 <template>
-  <main>
-    <h1>Hello</h1>
-    <button @click="createTodo">+ new</button>
-   
-    <div>
-      🥳 App successfully hosted. Try creating a new todo.
-      <br />
-      <a href="https://docs.amplify.aws/gen2/start/quickstart/nextjs-pages-router/">
-        Review next steps of this tutorial.
-      </a>
+  <main>   
+    <div id="nbo_img" class="image-container">
+      <h1>Thank you for your interest!</h1>
+      <img alt="NBO Image" src="../assets/YNBO 2025 white.png" >
     </div>
   </main>
 </template>
