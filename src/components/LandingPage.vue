@@ -21,13 +21,16 @@ async function isUniqueLink(product_id: string, base_number: string, offer_id: s
       }
     }
   });
-  console.log(errors);
+  
+  if(errors){
+    console.log(errors);
+  }
+  
   // Return true if no existing record was found (unique), false otherwise
   return links.length === 0;
 }
 
 async function getUrlParams() {
-  console.log("getUrlParams");
   let urlParams = new URLSearchParams(window.location.search);
 
   const product_id = urlParams.get('product_id');
@@ -35,10 +38,6 @@ async function getUrlParams() {
   const offer_id = urlParams.get('offer_id');
 
   if (product_id && base_number && offer_id){
-    console.log(product_id);
-    console.log(base_number);
-    console.log(offer_id);
-
     const isUnique = await isUniqueLink(product_id, base_number, offer_id);
 
     if(isUnique){
