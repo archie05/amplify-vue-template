@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Todos from './components/Todos.vue'
+import LandingPage from './components/LandingPage.vue'
 </script>
 
 <template>
   <main>
-    <Todos />
+    <LandingPage />
   </main>
 </template>
 
