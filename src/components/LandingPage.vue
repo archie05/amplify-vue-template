@@ -20,14 +20,14 @@ function getUrlParams() {
 
     // if(client.models.LinkTracking.get())
     client.models.LinkTracking.create({
-      product_id: product_id,
-      base_number: base_number,
-      offer_id: offer_id
+      productId: product_id,
+      baseNumber: base_number,
+      offerId: offer_id
     });   
   }
 }
     
-// fetch todos when the component is mounted
+// fetch url params when the component is mounted
  onMounted(() => {
   getUrlParams()
 });
