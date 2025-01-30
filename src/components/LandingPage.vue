@@ -63,14 +63,38 @@ async function getUrlParams() {
 
 <style scoped>
 .image-container {
+  max-width: 90vw; /* Ensures it scales down on smaller screens */
+  max-height: 90vh; /* Prevents it from exceeding viewport height */
   width: 800px;
-  height: 800px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .image-container img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover; /* Ensures the image fills the div without distortion */
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .image-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-container {
+    width: 100%;
+  }
+
+  .image-container h1 {
+    font-size: 1.5rem;
+  }
 }
 </style>
 
